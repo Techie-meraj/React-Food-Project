@@ -2,6 +2,11 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import {Navigate, useNavigate, useParams} from 'react-router-dom'
 import Meals from './Meals'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { Link } from 'react-router-dom';
+import Card1 from './Card1';
 
 const Foodetails = () => {
    let Navigate=useNavigate()
@@ -23,6 +28,57 @@ const Foodetails = () => {
     useEffect(()=>{
       foodinfo()
     },[])
+
+    const [mealdess,setMealdess]=useState("")
+    const dessert=async()=>{ 
+    const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert`
+      );
+      const data = await response.json();
+      setMealdess(data.meals);
+    };
+   
+   useEffect(()=>{
+    dessert()
+   },[])
+
+   const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+
+  };
 
   
     
@@ -64,6 +120,19 @@ const Foodetails = () => {
      </div>
      </div>
   
+     <div className="slider-container w-4/5 h-72 mx-auto mt-10">
+      <Slider {...settings}>
+        {
+         mealdess ? mealdess.map((item)=> (
+            <Link key={item.idMeal} to={`/foodetails/${item.idMeal}` }><Card1
+              key={item.idMeal}
+              Name={item.strMeal}
+              image={item.strMealThumb}
+            /></Link>
+          )): <h3>Error</h3>
+      }
+      </Slider>
+    </div>
   
   </>
 )

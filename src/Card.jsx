@@ -11,7 +11,7 @@ const Card = ({ image, Name }) => {
             className="h-full w-full transition-all hover:scale-110 cursor-pointer"
           />
         </div>
-        <div className="h-1/5 w-full text-center flex flex-col justify-evenly text-black italic ">
+        <div className="h-1/5 w-full text-center flex flex-col justify-evenly text-black italic bg-lime-400">
           <div className="text-3xl">{Name}</div>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Dessert = () => {
 
 
   return (<>
-    <h3 className='text-2xl text-center border-b-2'>Dessert</h3>
+    <h3 className='text-2xl text-center text-teal-300'>Desserts</h3>
     <div className="slider-container w-4/5 h-72 mx-auto mt-10">
       <Slider {...settings}>
         {

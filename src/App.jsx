@@ -10,8 +10,8 @@ const App = () => {
   
   return (
     <>
-    
-      
+   
+          
       <NavBar/>
       <Routes>
       <Route path="/" element={<Navigate to="" />} />
@@ -21,6 +21,8 @@ const App = () => {
       <Route path='/dessert' element={<Dessert/>}/>
       <Route path='/foodetails/:id' element={<Foodetails/>}/>
       </Routes> 
+      
+     
        
         
     </>

@@ -3,7 +3,7 @@ import React from 'react'
 const Card1 = ({image, Name}) => {
   return (
     <div  className="h-[200px] border w-[200px] overflow-hidden rounded-3xl mx-auto">
-    <div className="h-full object-contain w-full overflow-hidden border border-white">
+    <div className="h-full object-cover w-full overflow-hidden border border-white">
       <img
         src={image}
         alt={Name}

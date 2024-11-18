@@ -18,7 +18,11 @@ const NavBar = () => {
     
   
   return (
-    <div className="navbar bg-base-100">
+    <>
+   
+
+
+    <div className="navbar bg-white">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,8 +41,8 @@ const NavBar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><Link to={'/home'} onClick={Change1}>Home</Link></li>
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ">
+        <li ><Link to={'/home'} onClick={Change1}>Home</Link></li>
         <li>
           <Link to={'/meals'}>Meals</Link>
          </li>
@@ -69,6 +73,10 @@ const NavBar = () => {
     <a className="btn"onClick={Change}>{ name ? "Log-Out" :"Log-In" }</a>
   </div>
 </div>
+
+
+
+</>
 )
 }
 

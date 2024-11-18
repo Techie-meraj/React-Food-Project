@@ -57,8 +57,8 @@ const Popmeals = () => {
 
   return (
     <>
-    <h3 className='text-2xl text-center border-b-2 md:text-lg'>Popular Meals</h3>
-    <div className="slider-container w-4/5 h-96 bg-red-200 border border-blue-300 mx-auto mt-10 rounded-2xl">
+    <h3 className='text-2xl text-center md:text-lg text-teal-300'>Popular Meals</h3>
+    <div className="slider-container w-4/5 h-96 mx-auto mt-10 rounded-2xl">
       <Slider {...settings}>
         {
          meal ? meal.map((item)=> (

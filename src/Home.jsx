@@ -4,10 +4,17 @@ import Dessert from './Dessert'
 
 const Home = () => {
   return (<>
-    <Popmeals/>
-    <br/>
-    <br/>
-    <Dessert/>
+       
+       <div
+      className="bg-cover bg-center h-full"
+      style={{ backgroundImage: "url('/pexels-pixabay-326281 (1).jpg')" }}
+    >
+      <Popmeals/>
+      <br/>
+      <br/>
+      <Dessert/>
+     </div> 
+     
   </>)
 }
 
