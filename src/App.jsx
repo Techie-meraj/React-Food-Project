@@ -5,6 +5,7 @@ import Foodetails from './Foodetails'
 import NavBar from './NavBar';
 import Popmeals from './Popmeals';
 import Dessert from './Dessert';
+import Pageload from './Pageload';
 
 const App = () => {
   
@@ -14,7 +15,7 @@ const App = () => {
           
       <NavBar/>
       <Routes>
-      <Route path="/" element={<Navigate to="" />} />
+      <Route path="/" element={<Pageload/>} />
       <Route path='/home' element={<Home/>}/>
       <Route path='/meals' element={<Meals/>}/>
       <Route path='/pop' element={<Popmeals/>}/>

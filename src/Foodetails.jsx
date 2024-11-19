@@ -96,6 +96,7 @@ const Foodetails = () => {
      </div>
      <div className='instruction p-6 mx-auto border border-blue-500 mt-8'>
      <h3 className='text-2xl text-black text-center m-4'>Ingredients && Measures</h3>
+     <div className='flex flex-col items-center'>
      <div>{ (meal.strIngredient1) ? <div>{meal.strIngredient1}:{meal.strMeasure1}</div>:null } </div>    
      <div>{ (meal.strIngredient2) ? <div>{meal.strIngredient2}:{meal.strMeasure2}</div>:null } </div>    
      <div>{ (meal.strIngredient3) ? <div>{meal.strIngredient3}:{meal.strMeasure3}</div>:null } </div>    
@@ -116,7 +117,7 @@ const Foodetails = () => {
      <div>{ (meal.strIngredient18) ? <div>{meal.strIngredient18}:{meal.strMeasure18}</div>:null } </div>    
      <div>{ (meal.strIngredient19) ? <div>{meal.strIngredient19}:{meal.strMeasure19}</div>:null } </div>    
      <div>{ (meal.strIngredient20) ? <div>{meal.strIngredient20}:{meal.strMeasure20}</div>:null } </div>    
-     
+     </div>
      </div>
      </div>
   
